@@ -18,19 +18,33 @@ switch (userMenuOption)
 {
     case "1":
         applyDijkstra(adjacencyMatrix)
+        
         break;
     case "2":
-        console.log("doing Prim's");
+        applyPrims(adjacencyMatrix)
+        
         break;
     case "3":
-        console.log("doing Kruskal's");
+        applyKruskal(adjacencyMatrix)
+        
         break;
     default:
         console.log("retard, Invalid option");
+        
         break;
 }
 
 function applyDijkstra(adjacencyMatrix)
 {
     console.log("We are applying Dijkstra; let us cook")
+}
+
+function applyPrims(adjacencyMatrix)
+{
+    console.log("doing Prim's");
+}
+
+function applyKruskal(adjacencyMatrix)
+{
+    console.log("doing Kruskal's");
 }
