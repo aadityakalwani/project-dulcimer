@@ -61,27 +61,32 @@ public int GetValidInt(int min, int max)
                 {
                     return validInt;
                 }
-
                 Console.WriteLine($"No bro enter a number between {min} and {max}");
                 return GetValidInt(min, max);
             }
-
             Console.WriteLine("Please enter a valid integer");
             return GetValidInt(min, max);
         }
-
  */
 // translating to JS:
 
 function getValidInt(userPrompt, min, max) {
     const attemptedInput = prompt(userPrompt);
-    if (Number.isInteger(attemptedInput)) {
+    if (Number.isInteger(attemptedInput))
+    {
         if (attemptedInput >= min && attemptedInput <= max)
         {
             return attemptedInput;
         }
-
-        console.log(`No bro enter a number between ${min} and ${max}`);
-        return getValidInt(min, max);
+        else
+        {
+            console.log(`No bro enter a number between ${min} and ${max}`);
+            return getValidInt(min, max);
+        }
+        
+    }
+    else
+    {
+        console.log("Please enter a valid integer");
     }
 }
