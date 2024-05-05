@@ -13,7 +13,8 @@ var adjacencyMatrix;
 // take an input for dimensions of the matrix / number of nodes etc. and then set up a 2d array as required
 
 // menu system
-let userMenuOption = getValidInt("1 - apply Dijkstra\n2 - apply Prim's\n3 - apply Kruskal's:\n", 1, 3)
+
+const userMenuOption = prompt("Enter your choice:\n1 - apply Dijkstra\n2 - apply Prim's\n3 - apply Kruskal's\n");
 
 switch (userMenuOption) 
 {
@@ -27,10 +28,6 @@ switch (userMenuOption)
         break;
     case "3":
         applyKruskal(adjacencyMatrix)
-        
-        break;
-    default:
-        console.log("retard, Invalid option");
         
         break;
 }
@@ -70,8 +67,12 @@ public int GetValidInt(int min, int max)
  */
 // translating to JS:
 
-function getValidInt(userPrompt, min, max) {
-    const attemptedInput = prompt(userPrompt);
+/*
+struggling to translate this to JS but here was the attempt:
+
+function getValidInt(min, max)
+{
+    const attemptedInput = Number(prompt("Enter your choice:\n"));
     if (Number.isInteger(attemptedInput))
     {
         if (attemptedInput >= min && attemptedInput <= max)
@@ -87,6 +88,8 @@ function getValidInt(userPrompt, min, max) {
     }
     else
     {
-        console.log("Please enter a valid integer");
+        console.log("no bro enter a valid integer");
+        return getValidInt(min, max);
     }
 }
+ */
